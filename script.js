@@ -18,8 +18,6 @@ function formatDate(date) {
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate();
 
-let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${temp}&units=metric`;
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -30,6 +28,8 @@ function search(event) {
     h1.innerHTML = null;
     alert("Please, insert a city");
   }
+  let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${temp}&units=metric`;
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
