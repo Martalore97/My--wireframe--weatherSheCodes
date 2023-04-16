@@ -18,6 +18,10 @@ function formatDate(date) {
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate();
 
+function displayWeatherCondition(response) {
+  document.querySelector("#city").innerHTML = response.data.name;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -36,8 +40,7 @@ form.addEventListener("submit", search);
 
 function displayTemperature(response) {
   event.preventDefault();
-  let city = document.querySelector("h1");
-  city.innerHTML = response.data.name;
+
   let temp = document.querySelector("#temp");
   temp.innerHTML = `${Math.round(response.data.main.temp)} ºC`;
 }
