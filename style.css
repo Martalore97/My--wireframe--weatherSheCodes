@@ -19,3 +19,7 @@ button {
 p {
   font-size: 48px;
 }
+.search-form {
+  background: #edb1f1;
+  color: black;
+}
