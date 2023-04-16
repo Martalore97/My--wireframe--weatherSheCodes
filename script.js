@@ -29,7 +29,7 @@ function search(event) {
   event.preventDefault();
   let city = document.querySelector("#");
   let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${temp}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeatherCondition);
 }
 let form = document.querySelector("#search-form");
